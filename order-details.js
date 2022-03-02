@@ -8,6 +8,10 @@ let reader = readline.createInterface({
   output: process.stdout,
 });
 
+console.log(
+  "\nOnly write below details if running first time or incase of new details, otherwise just press Enter\n"
+);
+
 const STORE_VARS = JSON.parse(fs.readFileSync("secrets.json"));
 
 const getAccessToken = () => {
