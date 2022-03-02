@@ -88,8 +88,7 @@ const main = async () => {
   const others = [];
 
   async function call(store, path, last) {
-    let reqUrl = `https://${store}/admin/api/2021-10/${path}.json?limit=250`;
-    reqUrl = last == 0 ? reqUrl : `${reqUrl}&since_id=${last}`;
+    let reqUrl = `https://${store}/admin/api/2021-10/${path}.json?limit=250&since_id=${last}`;
     reqUrl =
       !startDate
         ? reqUrl
